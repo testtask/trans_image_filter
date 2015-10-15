@@ -1,0 +1,17 @@
+sample/Debug/vc140.pdb
+*.idb
+sample/Debug/test.obj
+*.tlog
+bin/opencv_ml2411d.dll
+*.dll
+*.pdb
+bin/sample.exe
+*.sdf
+trans_image_filter.opensdf
+*.user
+trans_image_filter/x64/Debug/open_cv.obj
+*.log
+*.suo
+*.ilk
+Debug/trans_image_filter.lib
+*.obj
