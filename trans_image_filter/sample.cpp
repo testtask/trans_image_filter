@@ -89,12 +89,12 @@ void test(const std::string &src_file_name, const std::string &dst_file_name, in
 
     if (mode & MODE_DENOIZE) {
         std::cout << "denoize image\n";
-        filter.denoize();
+        filter.denoize(7);
     }
 
     if (mode & MODE_EDGE_DETECTION) {
         std::cout << "detect edges\n";
-        filter.detect_edges(2);
+        filter.detect_edges(3);
     }
 
     std::cout << "get output buffer\n";
