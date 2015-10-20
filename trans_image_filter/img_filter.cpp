@@ -63,7 +63,7 @@ namespace img_filter_ns {
         m_img = cv::imdecode(arr, CV_LOAD_IMAGE_COLOR);
 
         if (m_img.empty())
-            throw std::exception("cannot decode buffer, not a valid JPEG bitstream");
+            throw std::runtime_error("cannot decode buffer, not a valid JPEG bitstream");
 
         cv::cvtColor(m_img, m_tmp, CV_BGR2GRAY);
     }
@@ -94,7 +94,7 @@ namespace img_filter_ns {
         assert(dst->size());
 
         if (m_img.empty())
-            throw std::exception("image buffer is corrupted");
+            throw std::runtime_error("image buffer is corrupted");
 
         const std::string format = ".jpeg";
 

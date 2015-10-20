@@ -50,7 +50,7 @@ void write_file(const std::string &dst_file_name, const raw_buf_t &buf)
     std::fstream dst(dst_file_name, std::ios::binary | std::ios::out);
 
     if (0 == dst.is_open())
-        throw std::exception((std::string("cannot open ") + dst_file_name).c_str());
+        throw std::runtime_error((std::string("cannot open ") + dst_file_name).c_str());
 
     dst.seekg(0, std::ios::beg);
 
@@ -63,7 +63,7 @@ void read_file(const std::string &src_file_name, raw_buf_t &buf)
     std::fstream src(src_file_name, std::ios::binary | std::ios::in);
 
     if (0 == src.is_open())
-        throw std::exception((std::string("cannot open ") + src_file_name).c_str());
+        throw std::runtime_error((std::string("cannot open ") + src_file_name).c_str());
 
     std::streamsize file_sz = src.tellg();
     src.seekg(0, std::ios::end);
