@@ -15,7 +15,7 @@ build steps:
 
 example usage:
 
-sample -i test2.jpd -o dst.jpg -m 3    ;1 - noize removal, 2 - edge detection, 3 - both
+sample -i test2.jpg -o dst.jpg -m 3    ;1 - noize removal, 2 - edge detection, 3 - both
 
 
 tested under Ubuntu-14.04
